@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container mx-auto">
+    <form class="rounded-sm bg-white p-2 shadow-md">
+      <div class="flex items-center">
+        <input type="text" class="w-full rounded-sm border border-gray-400 py-1 px-2" placeholder="Search ..." />
+        <button class="ml-2 rounded-sm bg-blue-500 px-2 py-1 text-white hover:bg-blue-600">Search</button>
+      </div>
+    </form>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+const { onMounted } = require('vue')
+// const { useSearchStore } = require('@/stores/search')
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+// const searchStore = useSearchStore()
+
+onMounted(async () => {
+  // const res = await searchStore.findJobs()
+
+  // console.log(res)
+})
 </script>
 
 <style>
